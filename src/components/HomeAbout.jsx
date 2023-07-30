@@ -13,7 +13,7 @@ const HomeAbout = ({ abouts }) => {
           offering their expertise and assistance. However, connecting these two
           parties efficiently and ensuring a seamless experience can be
           challenging. This is where a CONECTAR, plays a crucial role as a
-          facilitator and coordinator. By bridging the gap between home service
+          facilitator and coordinator.By bridging the gap between home service
           providers and homeowners, We are instrumental in creating a harmonious
           and efficient ecosystem.
         </p>
