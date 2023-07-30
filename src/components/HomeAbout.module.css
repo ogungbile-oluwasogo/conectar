@@ -1,0 +1,132 @@
+.home-about-container {
+  display: flex;
+  background-color: #800000;
+  padding: 50px 20px 25px 20px;
+}
+
+.about-flex-one {
+  padding: 0px 20px;
+}
+
+.home-about-container h3 {
+  text-align: center;
+  color: #e2e0e0;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.home-about-container h4 {
+  color: #e2e0e0;
+  font-style: italic;
+}
+
+.home-about-container p {
+  margin: 20px 0px;
+  color: #e2e0e0;
+  font-size: smaller;
+  font-weight: 100;
+  line-height: 1.95;
+}
+
+.home-about-container ul {
+  list-style: none;
+  color: #e2e0e0;
+  padding: 3px 0px;
+}
+
+.home-about-container ul li {
+  padding: 4px 0px;
+  font-size: smaller;
+  white-space: nowrap;
+}
+
+.home-about-container ul li span {
+  margin-right: 40px;
+  font-size: large;
+}
+
+/* Styling the images */
+
+.about-flex-two {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 11px;
+  height: 420px;
+  margin-right: 30px;
+}
+
+.about-flex-two .about-images {
+  display: inline;
+}
+
+.about-flex-two img {
+  width: 220px;
+  height: 205px;
+  object-fit: cover;
+}
+
+/* MOBILE STYLING */
+
+@media (max-width: 1170px) {
+  .about-flex-two img {
+    width: 164px;
+    height: 205px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .about-flex-two img {
+    width: 150px;
+    height: 205px;
+  }
+}
+
+@media (max-width: 930px) {
+  .home-about-container h3 {
+    padding-top: 15px;
+  }
+  .home-about-container {
+    display: block;
+    padding: 0px 30px;
+  }
+  .about-flex-two {
+    background-color: #800000;
+    width: 80%;
+    gap: 5px;
+    margin: 0 auto;
+  }
+  .about-flex-two img {
+    width: 205px;
+    height: 205px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: -4px 11px 31px -20px #fff;
+  }
+}
+
+@media (max-width: 730px) {
+  .about-flex-two {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: auto;
+  }
+  .about-flex-two img {
+    width: 210px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .home-about-container ul li {
+    padding: 4px 0px;
+    font-size: x-small;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 610px) {
+  .about-flex-two {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
