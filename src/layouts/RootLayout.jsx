@@ -8,7 +8,6 @@ const RootLayout = () => {
   return (
     <Fragment>
       {/* NAVIGATION SECTION */}
-
       <div className={style["flex-wrapper"]}>
         <div className={style["inner-flex"]}>
           <NavLink to="/">
@@ -41,10 +40,8 @@ const RootLayout = () => {
         </div>
         <h4>Menu</h4>
       </div>
-
       {/* Blur Background */}
       <div className={style["blur-bacground"]}></div>
-
       {/* SUB HEADING SECTION */}
       <div className={style["welcome-header"]}>
         <p>
@@ -55,7 +52,6 @@ const RootLayout = () => {
           </marquee>
         </p>
       </div>
-
       <main>
         <Outlet />
       </main>

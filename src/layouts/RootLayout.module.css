@@ -8,6 +8,7 @@
   top: 0px;
   z-index: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .flex-wrapper {
@@ -23,6 +24,7 @@
   justify-content: center;
   gap: 25px;
   z-index: 1;
+  overflow: hidden;
 }
 .flex-wrapper h4 {
   display: none;

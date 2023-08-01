@@ -1,5 +1,7 @@
 /* HOMEIMAGESLIDER.JSX STLYING */
-
+.homeslider-wrapper {
+  position: relative;
+}
 .bg-color {
   background-color: #800000;
   width: 100%;
@@ -9,7 +11,7 @@
 
 .home-search-area {
   position: absolute;
-  top: 38%;
+  top: 280px;
   left: 10%;
   overflow: hidden;
 }
@@ -61,7 +63,7 @@ label {
 @media (max-width: 680px) {
   .home-search-area {
     position: absolute;
-    top: 35%;
+    top: 240px;
     left: 4%;
   }
   label {
@@ -122,14 +124,17 @@ label {
     margin: 0px 1px;
   }
 }
-
-@media (max-width: 360px) {
+@media (max-width: 500px) {
+  .home-search-area {
+    width: 23rem;
+  }
   .home-search-button {
     width: 70px;
-    right: 20px;
+    right: -80px;
     top: 40px;
   }
-
+}
+@media (max-width: 360px) {
   .home-search-input {
     height: 45px;
     width: 260px;

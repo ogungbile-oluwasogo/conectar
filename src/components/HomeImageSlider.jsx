@@ -20,33 +20,37 @@ const HomeImageSlider = ({ slides }) => {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "41% 59%",
     height: "430px",
+    width: "100%",
     zIndex: "3",
     transition: "2.5s ease-in-out",
+    overflow: "hidden",
   };
 
   return (
     <Fragment>
-      <div style={slideStyle}>
-        <div className={style["bg-color"]}></div>
-      </div>
-      <div className={style["home-search-area"]}>
-        <form action="">
-          <label htmlFor="">
-            Find your Home Service provider in just a click!!!
-          </label>
-          <button className={style["home-search-button"]}>Search</button>
-          <input
-            type="text"
-            placeholder="&#128269; Search for Services e.g (plumbing)"
-            className={style["home-search-input"]}
-          />
-        </form>
-        <div className={style["popular-jobs"]}>
-          <p>Popular: </p>
-          <Link to="/categories/hairdressing">Hairdressing</Link>
-          <a href="/">Barbing</a>
-          <a href="/">Plumbing</a>
-          <a href="/">House Cleaner</a>
+      <div className="homeslider-wrapper">
+        <div style={slideStyle}>
+          <div className={style["bg-color"]}></div>
+        </div>
+        <div className={style["home-search-area"]}>
+          <form action="">
+            <label htmlFor="">
+              Find your Home Service provider in just a click!!!
+            </label>
+            <button className={style["home-search-button"]}>Search</button>
+            <input
+              type="text"
+              placeholder="&#128269; Search for Services e.g (plumbing)"
+              className={style["home-search-input"]}
+            />
+          </form>
+          <div className={style["popular-jobs"]}>
+            <p>Popular: </p>
+            <Link to="/categories/hairdressing">Hairdressing</Link>
+            <a href="/">Barbing</a>
+            <a href="/">Plumbing</a>
+            <a href="/">House Cleaner</a>
+          </div>
         </div>
       </div>
 
