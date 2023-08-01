@@ -85,6 +85,7 @@ label {
 
   .home-search-button {
     width: 70px;
+    height: 48px;
     right: -1%;
     top: 40px;
   }
