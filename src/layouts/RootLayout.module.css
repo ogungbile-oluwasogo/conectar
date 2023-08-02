@@ -15,7 +15,7 @@
   position: absolute;
   display: flex;
   height: 95px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -26,7 +26,7 @@
   z-index: 1;
   overflow: hidden;
 }
-.flex-wrapper h4 {
+.flex-wrapper .mobile-menu {
   display: none;
 }
 
@@ -340,7 +340,7 @@ a.active {
   .flex-wrapper {
     height: 70px;
   }
-  .flex-wrapper h4 {
+  .flex-wrapper .mobile-menu {
     display: inline;
   }
   .flex-wrapper {

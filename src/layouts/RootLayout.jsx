@@ -1,10 +1,17 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
+import MenuBar from "../images/svgs/MenuBar";
 import Logo from "../pages/Logo";
 import style from "./RootLayout.module.css";
 
 const RootLayout = () => {
+  const [showNav, setShowNav] = useState(false);
+
+  const showMenuBar = () => {
+    setShowNav((onshow) => !onshow);
+  };
+
   return (
     <Fragment>
       {/* NAVIGATION SECTION */}
@@ -38,7 +45,9 @@ const RootLayout = () => {
         <div>
           <button className={style.signup}>Sign Up</button>
         </div>
-        <h4>Menu</h4>
+        <span className={style["mobile-menu"]} onClick={showMenuBar}>
+          <MenuBar showNav={showNav} />
+        </span>
       </div>
       {/* Blur Background */}
       <div className={style["blur-bacground"]}></div>
