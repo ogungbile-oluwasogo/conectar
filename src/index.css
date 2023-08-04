@@ -20,7 +20,7 @@ code {
 
 .mobile-navbar-hide {
   height: 100vh;
-  backdrop-filter: blur(70px);
+  backdrop-filter: blur(110px);
   position: fixed;
   z-index: 11;
   width: 0;
@@ -29,7 +29,7 @@ code {
 .mobile-navbar-show {
   width: 65%;
   height: 100vh;
-  backdrop-filter: blur(80px);
+  backdrop-filter: blur(110px);
   position: fixed;
   z-index: 11;
   transition: 0.3s ease-in-out;
