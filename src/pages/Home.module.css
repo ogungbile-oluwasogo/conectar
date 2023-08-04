@@ -126,6 +126,9 @@ label {
   }
 }
 @media (max-width: 500px) {
+  .home-search-area .popular-jobs {
+    margin-top: 17px;
+  }
   .home-search-area {
     width: 23rem;
   }

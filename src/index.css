@@ -16,6 +16,25 @@ code {
     monospace;
 }
 
+/* MOBILE NAV BAR STYLING */
+
+.mobile-navbar-hide {
+  height: 100vh;
+  backdrop-filter: blur(70px);
+  position: fixed;
+  z-index: 11;
+  width: 0;
+  transition: 0.5s ease-in-out;
+}
+.mobile-navbar-show {
+  width: 65%;
+  height: 100vh;
+  backdrop-filter: blur(80px);
+  position: fixed;
+  z-index: 11;
+  transition: 0.3s ease-in-out;
+}
+
 /* JoinUsButton.jsx styling */
 
 .join-us-wrapper {
