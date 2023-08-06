@@ -19,8 +19,9 @@ const ExploreServices = () => {
         duration: 1,
         scrollTrigger: {
           trigger: el,
-          start: "top 55%",
+          start: "top 80%",
           end: "top 10%",
+          markers: true,
         },
       }
     );
@@ -37,7 +38,7 @@ const ExploreServices = () => {
         delay: 1,
         scrollTrigger: {
           trigger: el,
-          start: "top 70%",
+          start: "top 95%",
           end: "top 10%",
         },
       }
