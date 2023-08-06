@@ -1,9 +1,32 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import style from "../pages/Home.module.css";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HomeImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const homeSearch = useRef(null);
+
+  useEffect(() => {
+    const el = homeSearch.current;
+    gsap.fromTo(
+      el,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 50%",
+          end: "top 10%",
+        },
+      }
+    );
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,7 +55,7 @@ const HomeImageSlider = ({ slides }) => {
         <div style={slideStyle}>
           <div className={style["bg-color"]}></div>
         </div>
-        <div className={style["home-search-area"]}>
+        <div className={style["home-search-area"]} ref={homeSearch}>
           <form action="">
             <label htmlFor="">
               Find your Home Service provider in just a click!!!
