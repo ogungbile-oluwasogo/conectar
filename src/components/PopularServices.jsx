@@ -11,16 +11,15 @@ const PopularServices = ({ services }) => {
     const el = popImageRef.current;
     gsap.fromTo(
       el,
-      { y: 40, opacity: 0 },
+      { y: 80, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        duration: 2,
+        duration: 1.6,
         scrollTrigger: {
           trigger: el,
-          start: "top 65%",
+          start: "top 60%",
           end: "top 10%",
-          // markers: true,
         },
       }
     );
