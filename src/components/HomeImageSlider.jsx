@@ -60,12 +60,12 @@ const HomeImageSlider = ({ slides }) => {
             <label htmlFor="">
               Find your Home Service provider in just a click!!!
             </label>
-            <button className={style["home-search-button"]}>Search</button>
             <input
               type="text"
               placeholder="&#128269; Search for Services e.g (plumbing)"
               className={style["home-search-input"]}
             />
+            <button className={style["home-search-button"]}>Search</button>
           </form>
           <div className={style["popular-jobs"]}>
             <p>Popular: </p>

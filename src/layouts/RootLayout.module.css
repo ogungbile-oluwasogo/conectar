@@ -86,14 +86,14 @@
   display: flex;
 }
 
-form {
+.flex-wrapper form {
   margin-right: 100px;
   /* position: relative; */
 }
 .header-input {
   background-color: #e2e0e0;
   border: 1px solid #e2e0e0;
-  height: 38px;
+  height: 40px;
   width: 270px;
 }
 .header-input::placeholder {
@@ -109,11 +109,9 @@ form {
   border: 1px solid #b1a6a6;
   color: #fff;
   font-size: medium;
-  border-radius: 10px;
-  position: absolute;
+  border-radius: 0px 10px 10px 0px;
   z-index: 1;
-  right: -20px;
-  top: -2px;
+
   cursor: pointer;
 }
 .header-search-button:hover {
@@ -193,7 +191,7 @@ a.active {
 /* Responsive Styling for header*/
 
 @media (max-width: 1250px) {
-  form {
+  .flex-wrapper form {
     margin-right: 80px;
   }
   .header-input {
@@ -217,7 +215,7 @@ a.active {
 }
 
 @media (max-width: 1160px) {
-  form {
+  .flex-wrapper form {
     margin-right: 60px;
   }
   .header-input {
@@ -240,7 +238,7 @@ a.active {
   }
 }
 @media (max-width: 1090px) {
-  form {
+  .flex-wrapper form {
     margin-right: 60px;
   }
   .header-input {
@@ -275,7 +273,7 @@ a.active {
   .flex-wrapper {
     gap: 25px;
   }
-  form {
+  .flex-wrapper form {
     margin-right: 40px;
   }
   .header-input {
@@ -312,7 +310,7 @@ a.active {
   .flex-wrapper {
     gap: 20px;
   }
-  form {
+  .flex-wrapper form {
     margin-right: 40px;
   }
   .header-input {

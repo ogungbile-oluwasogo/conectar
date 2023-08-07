@@ -12,22 +12,32 @@
 .home-search-area {
   position: absolute;
   top: 280px;
+  /* width: 90%; */
   left: 10%;
   overflow: hidden;
 }
+.home-search-area form {
+  width: 100%;
+}
 
-form {
-  margin-right: 100px;
-  position: relative;
+form input[type="text"] {
+  padding: 0px 15px;
+  font-size: large;
+  color: #707070;
+}
+
+input:focus {
+  outline-color: #800000;
+  outline-style: groove;
 }
 
 label {
   display: block;
-  letter-spacing: 1.1px;
+  letter-spacing: 1.5px;
   word-spacing: 4px;
   font-size: larger;
   font-weight: 700;
-  width: 450px;
+  width: 89%;
   color: #fff;
   margin-bottom: 5px;
 }
@@ -35,8 +45,8 @@ label {
 .home-search-input {
   background-color: #fff;
   border: 1px solid #e2e0e0;
-  height: 45px;
-  width: 370px;
+  height: 46px;
+  width: 69%;
 }
 .home-search-input::placeholder {
   color: #b7b4b49b;
@@ -46,16 +56,16 @@ label {
 
 .home-search-button {
   height: 47px;
-  width: 120px;
+  width: 20%;
   background-color: #1cce7c;
   border: 1px solid #b1a6a6;
   color: #fff;
   font-size: medium;
-  border-radius: 10px;
-  position: absolute;
+  border-radius: 0px 10px 10px 0px;
+
   z-index: 1;
-  right: -30px;
-  top: 50px;
+  /* right: -30px; */
+  /* top: 50px; */
   cursor: pointer;
 }
 
@@ -71,29 +81,19 @@ label {
     word-spacing: 2px;
     font-size: medium;
     font-weight: 700;
-    width: 345px;
+    /* width: 100%; */
   }
 
-  .home-search-input {
-    height: 45px;
-    width: 290px;
-  }
   .home-search-input::placeholder {
     padding-left: 10px;
     font-size: 12px;
-  }
-
-  .home-search-button {
-    width: 70px;
-    height: 48px;
-    right: -1%;
-    top: 40px;
   }
 }
 
 /* Popular Jobs Styling */
 .home-search-area .popular-jobs {
   display: flex;
+  /* width: 90%; */
   margin-top: 15px;
   align-items: center;
 }
@@ -130,20 +130,19 @@ label {
     margin-top: 17px;
   }
   .home-search-area {
-    width: 23rem;
+    width: 90%;
+  }
+  label {
+    width: 100%;
+  }
+  .home-search-input {
+    width: 70%;
   }
   .home-search-button {
-    width: 70px;
-    right: -81px;
-    top: 40px;
+    width: 30%;
   }
 }
 @media (max-width: 360px) {
-  .home-search-input {
-    height: 45px;
-    width: 260px;
-  }
-
   .home-search-area .popular-jobs a {
     width: 69px;
     font-size: xx-small;

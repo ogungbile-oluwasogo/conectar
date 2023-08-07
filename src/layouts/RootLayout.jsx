@@ -54,12 +54,12 @@ const RootLayout = () => {
         </div>
         <div>
           <form action="">
-            <button className={style["header-search-button"]}>Search</button>
             <input
               type="text"
               placeholder="&#128269; Find services"
               className={style["header-input"]}
             />
+            <button className={style["header-search-button"]}>Search</button>
           </form>
         </div>
 
