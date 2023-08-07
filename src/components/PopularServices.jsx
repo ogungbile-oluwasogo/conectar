@@ -18,7 +18,7 @@ const PopularServices = ({ services }) => {
         duration: 1.6,
         scrollTrigger: {
           trigger: el,
-          start: "top 60%",
+          start: "top 95%",
           end: "top 10%",
         },
       }
