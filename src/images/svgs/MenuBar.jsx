@@ -8,7 +8,7 @@ const MenuBar = ({ showNav }) => {
       {!showNav ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height="2em"
+          height="1.4em"
           viewBox="0 0 448 512"
         >
           <path
@@ -20,7 +20,7 @@ const MenuBar = ({ showNav }) => {
       ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          height="2em"
+          height="1.4em"
           viewBox="0 0 384 512"
         >
           <path
