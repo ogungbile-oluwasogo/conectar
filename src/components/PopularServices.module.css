@@ -10,7 +10,6 @@
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-/* text-align: center; */
 
 .popular-section h3 {
   margin-bottom: 20px;
@@ -91,13 +90,17 @@
   }
 
   .inner-wrapper img {
-    width: 150px;
+    width: 200px;
     height: 170px;
     margin-bottom: 5px;
   }
 
   .inner-wrapper p {
-    visibility: hidden;
+    position: relative;
+    margin: auto;
+    background-color: rgba(256, 256, 256, 0.7);
+    width: 200px;
+    bottom: 48px;
   }
 }
 
@@ -110,5 +113,8 @@
     width: 80%;
     height: 210px;
     margin-bottom: 5px;
+  }
+  .inner-wrapper p {
+    width: 80%;
   }
 }

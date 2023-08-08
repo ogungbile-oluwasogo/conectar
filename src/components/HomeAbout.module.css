@@ -28,6 +28,15 @@
   line-height: 1.95;
 }
 
+.home-about-container p a {
+  color: antiquewhite;
+}
+
+.home-about-container p a:hover {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
 .home-about-container ul {
   list-style: none;
   color: #e2e0e0;
@@ -116,6 +125,7 @@
     width: 210px;
     height: 200px;
     margin-bottom: 10px;
+    border-radius: 4px;
   }
   .home-about-container ul li {
     padding: 4px 0px;
@@ -128,5 +138,8 @@
   .about-flex-two {
     display: grid;
     grid-template-columns: auto;
+  }
+  .about-flex-two img {
+    width: 100%;
   }
 }
