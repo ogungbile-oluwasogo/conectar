@@ -21,7 +21,7 @@ const HomeProcess = () => {
             <h5>Find Any Home Service Provider</h5>
             <p>
               Explain and find any service suitable for you & assign it to a
-              capable service provider
+              capable service provider.
             </p>
           </div>
         </div>
