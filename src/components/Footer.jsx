@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../pages/Logo";
 import style from "./Footer.module.css";
 
@@ -10,16 +11,13 @@ const Footer = () => {
         <div className={style["footer-inner-flex"]}>
           <ul>
             <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">About CONECTAR</a>
+              <Link to="about">About CONECTAR</Link>
             </li>
             <li>
               <a href="/">Terms of services</a>
             </li>
             <li>
-              <a href="/">Privacy & Policy</a>
+              <Link to="privacy">Privacy & Policy</Link>
             </li>
           </ul>
           <ul>

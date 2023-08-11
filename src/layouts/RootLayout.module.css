@@ -52,7 +52,7 @@
 
 .blur-bacground {
   background-image: url("/public/platewashing.jpg");
-  filter: blur(70px);
+  filter: blur(45px);
   height: 95px;
   background-repeat: no-repeat;
   background-position: center;

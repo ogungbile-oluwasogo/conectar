@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import style from "./HomeAbout.module.css";
 
 const HomeAbout = ({ abouts }) => {
@@ -9,7 +10,7 @@ const HomeAbout = ({ abouts }) => {
           Our mission is to create a thriving community where service providers
           can showcase their expertise and recipients can easily find and engage
           with the perfect service for their needs. <br />
-          <a href="/">Read More...</a>
+          <Link to="about">Read More...</Link>
         </p>
 
         <h4>We: </h4>
