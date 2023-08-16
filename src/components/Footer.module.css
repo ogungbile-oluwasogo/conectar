@@ -1,6 +1,9 @@
 .footer-wrapper {
   background-color: #541616;
   border: 1px solid #707070;
+}
+
+.footer-wrapper-flex {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -38,11 +41,20 @@
   font-size: small;
   color: #800000;
 }
+.social-media {
+  display: flex;
+  margin: 0px 80px;
+  justify-content: right;
+}
+
+.social-media a {
+  padding: 3px 8px;
+}
 
 /* Footer Mobile styling*/
 
 @media (max-width: 680px) {
-  .footer-wrapper {
+  .footer-wrapper-flex {
     display: block;
   }
 
@@ -51,6 +63,14 @@
   }
   .footer-inner-flex ul {
     margin-bottom: 15px;
+  }
+
+  .social-media {
+    margin: 0px 20px;
+  }
+
+  .social-media a {
+    padding: 3px 6px;
   }
 
   .footer-copyright {

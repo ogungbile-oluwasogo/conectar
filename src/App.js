@@ -7,8 +7,10 @@ import {
 import RootLayout from "./layouts/RootLayout";
 import AboutUs from "./pages/AboutUs";
 import Categories from "./pages/Categories";
+import Faq from "./pages/Faq";
 import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +18,8 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="about" element={<AboutUs />} />
       <Route path="privacy" element={<Privacy />} />
+      <Route path="terms" element={<Terms />} />
+      <Route path="faqs" element={<Faq />} />
       <Route path="categories" element={<Categories />}>
         <Route path="hairdressing" element="" />
       </Route>

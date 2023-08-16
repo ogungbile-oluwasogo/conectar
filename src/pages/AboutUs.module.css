@@ -1,7 +1,7 @@
 .aboutus-container {
   background-color: #faf6f6;
   border: 2px dashed #e2e0e0;
-  width: 75%;
+  width: 80%;
   margin: 20px auto;
   padding: 25px 0px;
 }
@@ -28,6 +28,7 @@
 .aboutus-container h4 {
   text-indent: 30px;
   padding: 0px 10px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 680px) {

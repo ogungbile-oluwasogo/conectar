@@ -21,7 +21,6 @@ const ExploreServices = () => {
           trigger: el,
           start: "top 95%",
           end: "top 10%",
-          // markers: true,
         },
       }
     );

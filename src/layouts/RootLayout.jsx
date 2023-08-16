@@ -14,6 +14,7 @@ const RootLayout = () => {
 
   return (
     <Fragment>
+      {/* <div className={style.wrapperr}> */}
       {/* MOBILE NAV BAR MENU */}
       {showNav && (
         <div className={style["mobile-nav-modal"]} onClick={showMenuBar}></div>
@@ -22,7 +23,6 @@ const RootLayout = () => {
         {showNav && (
           <div className={style["mobile-nav-list"]}>
             <Logo />
-
             <div>
               <button className={style["signin-mobile"]}>Sign In</button>
             </div>
@@ -91,6 +91,7 @@ const RootLayout = () => {
           </marquee>
         </p>
       </div>
+      {/* </div> */}
       <main>
         <Outlet />
       </main>

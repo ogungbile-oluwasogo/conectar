@@ -11,7 +11,7 @@ const Privacy = () => {
         escrow service between service providers and recipients.
       </p>
       <h4>Information we collect:</h4>
-      <br />
+
       <p>
         <span>Personal Information:</span> When you register as a user on
         Conectar, we may collect personal information such as your name, email
@@ -31,7 +31,7 @@ const Privacy = () => {
         and feedback.
       </p>
       <h4>How We Use Your Information:</h4>
-      <br />
+
       <p>
         <span>Facilitating Transactions: </span>We use your personal information
         and transaction details to facilitate the escrow process between service
@@ -47,7 +47,7 @@ const Privacy = () => {
         anonymized data to improve our website, services, and user experience.
       </p>
       <h4>Information Sharing:</h4>
-      <br />
+
       <p>
         <span>Service Providers and Recipients: </span>As an escrow service, we
         share relevant information between the involved service providers and
@@ -59,7 +59,7 @@ const Privacy = () => {
         order or government inquiry.
       </p>
       <h4>Data Retention:</h4>
-      <br />
+
       <p>
         We retain your personal information for as long as necessary to fulfill
         the purposes outlined in this Privacy Policy unless a longer retention
@@ -67,7 +67,7 @@ const Privacy = () => {
         anonymize your information when it is no longer needed.
       </p>
       <h4>Cookies and Similar Technologies:</h4>
-      <br />
+
       <p>
         We may use cookies and similar technologies to enhance your browsing
         experience, analyze usage patterns, and personalize content. By using
@@ -75,7 +75,7 @@ const Privacy = () => {
         Privacy Policy and our Cookie Policy.
       </p>
       <h4>Your Rights:</h4>
-      <br />
+
       <p>
         <span>Access and Correction: </span>You have the right to contact us
         directly if the need arise to access, review, update, or correct any of
@@ -105,7 +105,7 @@ const Privacy = () => {
         of the processing of your personal information in certain circumstances.
       </p>
       <h4>Data Security:</h4>
-      <br />
+
       <p>
         We implement reasonable and appropriate security measures to protect
         your personal information and ensure the confidentiality of your data.
@@ -114,7 +114,7 @@ const Privacy = () => {
         security of your information.
       </p>
       <h4>Children's Privacy:</h4>
-      <br />
+
       <p>
         Conectar is not intended for use by individuals under the age of 18
         ("Children"). We do not knowingly collect personal information from
@@ -125,7 +125,7 @@ const Privacy = () => {
         remove that information from our servers.
       </p>
       <h4>Transfers:</h4>
-      <br />
+
       <p>
         As Conectar operates only within Nigeria, your personal information may
         be transferred to and processed in countries outside of your residence.
@@ -134,7 +134,7 @@ const Privacy = () => {
         transfers.
       </p>
       <h4>Changes to the Privacy Policy: </h4>
-      <br />
+
       <p>
         We reserve the right to update or modify this Privacy Policy at any
         time. Any changes will be posted on our website, and the revised policy
@@ -143,7 +143,7 @@ const Privacy = () => {
         any updates or changes.
       </p>
       <h4>Contact Us:</h4>
-      <br />
+
       <p>
         If you have any questions or concerns about this Privacy Policy or our
         data practices, please contact us at [insert contact details(email and
