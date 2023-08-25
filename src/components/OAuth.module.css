@@ -1,0 +1,46 @@
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1em 0;
+}
+
+.facebook-icon-btn {
+  padding: 0.5em;
+  background: blue;
+  border-radius: 50%;
+  border: none;
+  color: #ffffff;
+
+  margin-right: 3em;
+  cursor: pointer;
+}
+
+.google-icon-btn {
+  padding: 0.5em 0.6em;
+  background: red;
+  border-radius: 50%;
+  border: none;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.facebook-icon {
+  font-size: 1.3rem;
+}
+
+.facebook-icon:hover {
+  opacity: 0.8;
+}
+
+.google-icon {
+  font-size: 1.3rem;
+}
+
+.google-icon:hover {
+  opacity: 0.8;
+}
+

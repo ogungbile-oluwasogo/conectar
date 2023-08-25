@@ -121,9 +121,8 @@
 .categories {
   background-color: #ffffff;
   margin-right: 30px;
-  padding: 11px 60px;
-  height: 40px;
-  width: 215px;
+  padding: 1em;
+  width: 115px;
   border-radius: 10px;
   font-size: medium;
   border: 1px solid #800000;
@@ -146,8 +145,7 @@ a.active {
 
 .signin {
   background-color: #ffffff;
-  height: 50px;
-  width: 120px;
+  padding: 1em;
   border-radius: 10px;
   font-size: medium;
   border: 1px solid #800000;
@@ -162,8 +160,7 @@ a.active {
 
 .signup {
   background-color: #1cce7c;
-  height: 50px;
-  width: 120px;
+  padding: 1em;
   border-radius: 10px;
   font-size: medium;
   border: 1px solid #b1a6a6;
