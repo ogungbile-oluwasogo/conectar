@@ -1,0 +1,37 @@
+.aboutus-container {
+  background-color: #faf6f6;
+  border: 2px dashed #e2e0e0;
+  width: 75%;
+  margin: 20px auto;
+  padding: 25px 0px;
+}
+.aboutus-container h2 {
+  color: #800008;
+  text-decoration: underline;
+  padding: 10px 10px;
+  text-indent: 30px;
+}
+
+.aboutus-container span {
+  font-weight: 700;
+}
+
+.aboutus-container p {
+  color: #434846;
+  text-indent: 30px;
+  letter-spacing: 2px;
+  line-height: 1.7rem;
+  padding: 0px 10px;
+  margin-bottom: 15px;
+}
+
+.aboutus-container h4 {
+  text-indent: 30px;
+  padding: 0px 10px;
+}
+
+@media (max-width: 680px) {
+  .aboutus-container h2 {
+    font-size: large;
+  }
+}

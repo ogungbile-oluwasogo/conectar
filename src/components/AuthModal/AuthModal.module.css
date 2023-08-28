@@ -1,0 +1,11 @@
+.close {
+  all: unset;
+  position: sticky;
+  top: 10px;
+  z-index: 3;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}

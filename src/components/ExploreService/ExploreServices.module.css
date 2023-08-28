@@ -1,0 +1,126 @@
+.explore-wrapper {
+  position: relative;
+  margin: 50px auto;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 115px;
+}
+
+.explore-wrapper h3 {
+  background-color: #fff;
+  color: #d58b8b;
+  padding: 20px 130px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px #800000;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.explore-background {
+  position: absolute;
+  background: transparent url("/public/homeimageslider2.jpg");
+  background-repeat: no-repeat;
+  background-position: 35% 65%;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px #800000;
+  opacity: 0.3;
+  font-weight: bold;
+  padding: 20px 60px;
+  top: 43px;
+  z-index: -1;
+  height: 280px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  row-gap: 50px;
+  padding-top: 75px;
+  margin-left: 70px;
+  text-align: left;
+}
+.grid a {
+  color: #434846;
+}
+
+/* Explore services mobile styling */
+@media (max-width: 900px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .explore-wrapper h3 {
+    font-size: medium;
+    padding: 20px 90px;
+    color: #d58b8b;
+  }
+  .explore-background {
+    height: 400px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .explore-wrapper {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .explore-background {
+    height: 500px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 500px) {
+  .explore-wrapper h3 {
+    font-size: small;
+    padding: 17px 20px;
+    color: #d58b8b;
+  }
+}
+
+@media (max-width: 500px) {
+  .explore-background {
+    height: 470px;
+    max-width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+  .explore-wrapper {
+    margin-bottom: 65px;
+  }
+  .explore-wrapper h3 {
+    font-size: smaller;
+    padding: 17px 20px;
+    color: #d58b8b;
+  }
+
+  .grid {
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 15px;
+    padding-top: 35px;
+    text-align: left;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%;
+  }
+}

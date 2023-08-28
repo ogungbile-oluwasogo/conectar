@@ -1,0 +1,191 @@
+/* HOMEIMAGESLIDER.JSX STLYING */
+.homeslider-wrapper {
+  position: relative;
+}
+.bg-color {
+  background-color: #800000;
+  width: 100%;
+  height: 430px;
+  opacity: 0.4;
+}
+
+.home-search-area {
+  position: absolute;
+  top: 280px;
+  /* width: 90%; */
+  left: 10%;
+  overflow: hidden;
+}
+.home-search-area form {
+  width: 100%;
+}
+
+form input[type="text"] {
+  padding: 0px 15px;
+  font-size: large;
+  color: #707070;
+}
+
+input:focus {
+  outline-color: #800000;
+  outline-style: groove;
+}
+
+label {
+  display: block;
+  letter-spacing: 1.5px;
+  word-spacing: 4px;
+  font-size: larger;
+  font-weight: 700;
+  width: 89%;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.home-search-input {
+  background-color: #fff;
+  border: 1px solid #e2e0e0;
+  height: 46px;
+  width: 69%;
+}
+.home-search-input::placeholder {
+  color: #b7b4b49b;
+  padding-left: 30px;
+  font-size: 14px;
+}
+
+.home-search-button {
+  height: 47px;
+  width: 20%;
+  background-color: #1cce7c;
+  border: 1px solid #b1a6a6;
+  color: #fff;
+  font-size: medium;
+  border-radius: 0px 10px 10px 0px;
+
+  z-index: 1;
+  /* right: -30px; */
+  /* top: 50px; */
+  cursor: pointer;
+}
+
+/* HOMEIMAGESLIDER.JSX Mobile styling */
+@media (max-width: 680px) {
+  .home-search-area {
+    position: absolute;
+    top: 240px;
+    left: 4%;
+  }
+  label {
+    letter-spacing: 0.4px;
+    word-spacing: 2px;
+    font-size: medium;
+    font-weight: 700;
+    /* width: 100%; */
+  }
+
+  .home-search-input::placeholder {
+    padding-left: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Popular Jobs Styling */
+.home-search-area .popular-jobs {
+  display: flex;
+  /* width: 90%; */
+  margin-top: 15px;
+  align-items: center;
+}
+
+.home-search-area .popular-jobs p {
+  color: #fff;
+  margin-right: 5px;
+}
+.home-search-area .popular-jobs a {
+  color: #fff;
+  border: 2px solid #e2e0e0;
+  border-radius: 5px;
+  width: 100px;
+  height: 32px;
+  font-size: small;
+  align-items: center;
+  display: flex;
+  margin: 0px 3px;
+  justify-content: center;
+}
+@media (max-width: 680px) {
+  .home-search-area .popular-jobs p {
+    margin-right: 2px;
+    font-size: x-small;
+  }
+  .home-search-area .popular-jobs a {
+    width: 75px;
+    font-size: x-small;
+    margin: 0px 1px;
+  }
+}
+@media (max-width: 500px) {
+  .home-search-area .popular-jobs {
+    margin-top: 17px;
+  }
+  .home-search-area {
+    width: 90%;
+  }
+  label {
+    width: 100%;
+  }
+  .home-search-input {
+    width: 70%;
+  }
+  .home-search-button {
+    width: 30%;
+  }
+}
+@media (max-width: 360px) {
+  .home-search-area .popular-jobs a {
+    width: 69px;
+    font-size: xx-small;
+    margin: 0px 1px;
+  }
+}
+
+/* PROUDLY SUPPORTED SECTION STYLING */
+
+.support-wrapper {
+  background-color: #fef6f6;
+  box-shadow: 0px 3px 20px #800000;
+  /* height: 100px; */
+  padding: 30px 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  opacity: 1;
+  margin-bottom: 70px;
+}
+
+.support-wrapper p {
+  color: #e2e0e0;
+  font-weight: bold;
+  font-size: large;
+  margin-left: 201px;
+}
+
+/* PROUDLY SUPPORTED SECTION STYLING  MOBILE STYLING*/
+@media (max-width: 600px) {
+  .support-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .support-wrapper {
+    justify-content: center;
+    padding: 20px 0px;
+  }
+  .support-wrapper p {
+    margin-left: 0px;
+    padding: 0px 0px;
+    font-size: medium;
+  }
+}

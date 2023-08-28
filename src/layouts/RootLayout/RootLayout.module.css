@@ -1,0 +1,403 @@
+.mobile-nav-modal {
+  height: 100vh;
+  width: 100%;
+  background-color: #800000;
+  z-index: 10;
+  opacity: 0.2;
+  position: fixed;
+}
+.mobile-nav-list {
+  padding: 7px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.15s ease-in-out;
+}
+
+.categories-mobile {
+  background-color: #ffffff;
+  padding: 11px 40px;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  font-size: medium;
+  border: 1px solid #800000;
+  color: #800000;
+  cursor: pointer;
+}
+
+.signin-mobile {
+  background-color: #ffffff;
+  height: 50px;
+  width: 120px;
+  border-radius: 10px;
+  font-size: medium;
+  border: 1px solid #800000;
+  color: #800000;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.signup-mobile {
+  background-color: #1cce7c;
+  height: 50px;
+  width: 120px;
+  border-radius: 10px;
+  font-size: medium;
+  border: 1px solid #b1a6a6;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.blur-bacground {
+  background-image: url("/public/platewashing.jpg");
+  filter: blur(45px);
+  height: 95px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0px;
+  z-index: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.flex-wrapper {
+  position: absolute;
+  display: flex;
+  height: 95px;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  z-index: 1;
+  overflow: hidden;
+}
+.flex-wrapper .mobile-menu {
+  display: none;
+}
+
+.inner-flex {
+  display: flex;
+}
+
+.flex-wrapper form {
+  margin-right: 100px;
+  /* position: relative; */
+}
+.header-input {
+  background-color: #e2e0e0;
+  border: 1px solid #e2e0e0;
+  height: 40px;
+  width: 270px;
+}
+.header-input::placeholder {
+  color: #4348469b;
+  padding-left: 30px;
+  font-size: medium;
+}
+
+.header-search-button {
+  height: 42px;
+  width: 98px;
+  background-color: #1cce7c;
+  border: 1px solid #b1a6a6;
+  color: #fff;
+  font-size: medium;
+  border-radius: 0px 10px 10px 0px;
+  z-index: 1;
+
+  cursor: pointer;
+}
+.header-search-button:hover {
+  background-color: #059954;
+}
+
+.categories {
+  background-color: #ffffff;
+  margin-right: 30px;
+  padding: 1em;
+  width: 115px;
+  border-radius: 10px;
+  font-size: medium;
+  border: 1px solid #800000;
+  color: #800000;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+a.active {
+  background-color: #800000;
+  color: #fff;
+}
+
+.categories:hover {
+  background-color: #800000;
+  color: #fff;
+}
+
+.signin {
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 10px;
+  font-size: medium;
+  border: 1px solid #800000;
+  color: #800000;
+  cursor: pointer;
+}
+
+.signin:hover {
+  background-color: #800000;
+  color: #fff;
+}
+
+.signup {
+  background-color: #1cce7c;
+  padding: 1em;
+  border-radius: 10px;
+  font-size: medium;
+  border: 1px solid #b1a6a6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signup:hover {
+  background-color: #059954;
+}
+
+/* Welcome Heading Styling */
+
+.welcome-header {
+  /* margin-top: 200px; */
+  color: #fff;
+  display: flex;
+  background-color: #800000;
+  height: 60px;
+  align-items: center;
+  font-size: large;
+  z-index: 2;
+}
+
+/* Responsive Styling for header*/
+
+@media (max-width: 1250px) {
+  .flex-wrapper form {
+    margin-right: 80px;
+  }
+  .header-input {
+    background-color: #e2e0e0;
+    border: 1px solid #e2e0e0;
+    height: 36px;
+    width: 230px;
+  }
+  .header-input::placeholder {
+    padding-left: 20px;
+  }
+  .header-search-button {
+    width: 80px;
+  }
+  .categories {
+    margin-right: 20px;
+    padding: 11px 55px;
+    height: 40px;
+    /* width: 100px; */
+  }
+}
+
+@media (max-width: 1160px) {
+  .flex-wrapper form {
+    margin-right: 60px;
+  }
+  .header-input {
+    background-color: #e2e0e0;
+    border: 1px solid #e2e0e0;
+    height: 36px;
+    width: 210px;
+  }
+  .header-input::placeholder {
+    padding-left: 20px;
+  }
+  .header-search-button {
+    width: 60px;
+  }
+  .categories {
+    margin-right: 10px;
+    padding: 11px 60px;
+    height: 40px;
+    /* width: 100px; */
+  }
+}
+@media (max-width: 1090px) {
+  .flex-wrapper form {
+    margin-right: 60px;
+  }
+  .header-input {
+    background-color: #e2e0e0;
+    border: 1px solid #e2e0e0;
+    height: 36px;
+    width: 190px;
+  }
+  .header-input::placeholder {
+    padding-left: 10px;
+  }
+  .header-search-button {
+    width: 65px;
+  }
+  .categories {
+    margin-right: 10px;
+    padding: 11px 40px;
+    height: 40px;
+    /* width: 100px; */
+  }
+  .signin {
+    height: 47px;
+    width: 100px;
+  }
+  .signup {
+    height: 47px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 980px) {
+  .flex-wrapper {
+    gap: 25px;
+  }
+  .flex-wrapper form {
+    margin-right: 40px;
+  }
+  .header-input {
+    background-color: #e2e0e0;
+    border: 1px solid #e2e0e0;
+    height: 36px;
+    width: 140px;
+  }
+  .header-input::placeholder {
+    padding-left: 7px;
+  }
+  .header-search-button {
+    width: 65px;
+    right: -55px;
+    top: -2px;
+  }
+  .categories {
+    margin-right: 10px;
+    padding: 9px 25px;
+    height: 40px;
+    /* width: 100px; */
+  }
+  .signin {
+    height: 45px;
+    width: 90px;
+  }
+  .signup {
+    height: 45px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 850px) {
+  .flex-wrapper {
+    gap: 20px;
+  }
+  .flex-wrapper form {
+    margin-right: 40px;
+  }
+  .header-input {
+    background-color: #e2e0e0;
+    border: 1px solid #e2e0e0;
+    height: 36px;
+    width: 130px;
+  }
+  .header-input::placeholder {
+    padding-left: 7px;
+  }
+  .header-search-button {
+    width: 65px;
+    right: -53px;
+    top: -2px;
+  }
+  .categories {
+    margin-right: 10px;
+    padding: 9px 25px;
+    height: 40px;
+    /* width: 100px; */
+  }
+  .signin {
+    height: 45px;
+    width: 90px;
+  }
+  .signup {
+    height: 45px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  .flex-wrapper {
+    gap: 25px;
+  }
+
+  .flex-wrapper form {
+    display: none;
+  }
+
+  .categories {
+    margin-left: 150px;
+  }
+}
+
+@media (max-width: 730px) {
+  .categories {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 680px) {
+  .blur-bacground {
+    height: 75px;
+  }
+  .flex-wrapper {
+    height: 75px;
+    /* left: 2.5%; */
+  }
+
+  .categories {
+    display: none;
+  }
+  .signin {
+    display: none;
+  }
+  .signup {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .blur-bacground {
+    height: 70px;
+  }
+  .flex-wrapper {
+    height: 70px;
+  }
+  .flex-wrapper .mobile-menu {
+    display: inline;
+  }
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .welcome-header {
+    height: 40px;
+  }
+  .welcome-header p {
+    font-size: small;
+  }
+}

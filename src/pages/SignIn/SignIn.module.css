@@ -1,0 +1,16 @@
+/* signin form starts */
+.signin-form {
+  width: 95%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+/* signin form stops */
+
+/* signin form header start */
+.signin-form-text {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+/* signin form header stops */

@@ -1,0 +1,147 @@
+.process-wrapper {
+  position: relative;
+}
+
+.process-blur-background {
+  background-image: url("/public/homeblurbackground.jpg");
+  filter: blur(3px);
+  background-position: 35% 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  border: 1px solid #707070;
+}
+
+.process-background-color {
+  background-color: #800000;
+  height: 450px;
+  opacity: 0.58;
+}
+
+.process-wrapper h4 {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-weight: 400;
+  font-size: larger;
+}
+
+.process-services-wrapper {
+  display: flex;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.svg-styling {
+  background-color: #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1cce7c;
+}
+
+.arrow-styling {
+  margin-bottom: 80px;
+}
+
+.find-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  margin: auto;
+}
+
+.process-text {
+  text-align: center;
+  color: #fff;
+}
+.process-text p {
+  font-size: x-small;
+  font-weight: 500;
+  width: 80%;
+  height: 20px;
+  margin: 2px auto;
+  color: #e2e0e0;
+  text-rendering: geometricPrecision;
+  /* word-spacing: 2px; */
+}
+
+/* MOBILE STYLING */
+@media (max-width: 1160px) {
+  .process-services-wrapper {
+    width: 80%;
+  }
+  .svg-styling {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 850px) {
+  .process-wrapper h4 {
+    font-size: large;
+  }
+  .svg-styling {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 720px) {
+  .process-wrapper h4 {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 680px) {
+  .process-blur-background {
+    height: 380px;
+  }
+
+  .process-background-color {
+    height: 380px;
+  }
+  .process-services-wrapper {
+    top: 180px;
+  }
+
+  .svg-styling {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 620px) {
+  .process-wrapper h4 {
+    /* font-size: small; */
+    white-space: nowrap;
+  }
+}
+@media (max-width: 500px) {
+  .process-services-wrapper {
+    /* left: 42%; */
+    width: 90%;
+  }
+
+  .svg-styling {
+    width: 60px;
+    height: 60px;
+  }
+
+  .process-text h5 {
+    font-size: xx-small;
+  }
+  .process-text p {
+    font-size: xx-small;
+  }
+}
