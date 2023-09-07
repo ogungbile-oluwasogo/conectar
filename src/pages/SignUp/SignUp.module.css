@@ -16,7 +16,8 @@
 /* Service Type starts */
 .signup-provider-active {
   background: #1cce7c;
-  color: #ffffff;
+  color:  #F7FAFC;
+;
 }
 
 .signup-service-type {
@@ -51,7 +52,8 @@
   margin: 1.3rem 0;
   padding: 0.8rem 0rem;
   background: #1cce7c;
-  color: #ffffff;
+  color:  #F7FAFC;
+;
   border: 1px solid #1cce7c;
   border-radius: 3px;
   width: 100%;
@@ -100,10 +102,12 @@
 }
 
 .signup-link-signin {
+  background: none;
+  border: none;
   margin: 1em;
   color: #800000;
-  text-decoration: underline;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .signup-link-signin:hover {
@@ -118,7 +122,8 @@
   padding: 1rem 0.5rem 1rem 40px;
   font-size: 1rem;
   border: 1px solid #1cce7c;
-  background-color: #ffffff;
+  background-color:  #F7FAFC;
+;
   border-radius: 10px;
   outline: none;
   margin: 0.5em;

@@ -1,9 +1,13 @@
+
 import React from "react";
 import Modal from "react-modal";
 import { ReactComponent as CloseIcon } from "../../images/close.-icon.svg";
 import styles from "./AuthModal.module.css"; // Import the CSS module
 import SignUp from "../../pages/SignUp";
 import SignIn from "../../pages/SignIn";
+import ForgetPassword from "../../pages/ForgetPassword";
+import { useContext } from "react";
+import { AuthContext } from "../AuthContext";
 
 const customStyles = {
   overlay: {
@@ -29,28 +33,30 @@ const customStyles = {
     maxHeight: "99vh",
   },
 };
-const AuthModal = ({ isOpen, closeModal, mode }) => {
+
+const AuthModal = () => {
+  const { authModalOpen, closeAuthModal, authMode } = useContext(AuthContext);
+
   // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
   Modal.setAppElement(document.getElementById("root"));
 
   const handleAuthSuccess = () => {
-    closeModal();
+    closeAuthModal(); // Close the modal when authentication is successful
   };
 
   return (
     <Modal
-      isOpen={isOpen}
-      onRequestClose={closeModal}
+      isOpen={authModalOpen} // Use authModalOpen to determine whether the modal should be open
+      onRequestClose={closeAuthModal}
       portalClassName="ReactModal__body"
       shouldCloseOnEsc
-      // If you want to close the close when the overlay is clicked, then change this to true
       shouldCloseOnOverlayClick={false}
       style={{ ...customStyles }}
     >
       <>
         <button
           type="button"
-          onClick={closeModal}
+          onClick={closeAuthModal}
           className={styles["close"]}
           aria-label="Close"
           data-testid="close-react-modal"
@@ -58,9 +64,10 @@ const AuthModal = ({ isOpen, closeModal, mode }) => {
           <CloseIcon />
         </button>
         <div>
-          {/* Apply the CSS module class */}
-          {mode === "signup" ? (
+          {authMode === "signup" ? (
             <SignUp onSuccess={handleAuthSuccess} />
+          ) : authMode === "forget-password" ? (
+            <ForgetPassword onSuccess={handleAuthSuccess} />
           ) : (
             <SignIn onSuccess={handleAuthSuccess} />
           )}

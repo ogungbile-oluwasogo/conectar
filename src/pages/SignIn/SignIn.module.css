@@ -11,7 +11,8 @@
 .signin-form-text {
   text-align: center;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
 /* signin form header stops */
 
@@ -21,7 +22,8 @@
   padding: 1rem 0.5rem 1rem 40px;
   font-size: 1rem;
   border: 1px solid #1cce7c;
-  background-color: #ffffff;
+  background-color:  #F7FAFC;
+;
   border-radius: 10px;
   outline: none;
   margin: 0.5em;
@@ -83,7 +85,8 @@
   margin: 1rem 0;
   padding: 0.8rem 0rem;
   background: #1cce7c;
-  color: #ffffff;
+  color:  #F7FAFC;
+;
   border: 1px solid #1cce7c;
   border-radius: 3px;
   width: 100%;
@@ -131,9 +134,12 @@
 
 .signin-link-signin,
 .signin-forgetPassword {
+  background: none;
+  border: none;
   margin: 1em;
   color: #800000;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .signin-link-signin:hover,

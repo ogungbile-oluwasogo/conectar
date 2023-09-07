@@ -1,42 +1,20 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import Footer from "../../components/Footer";
 import MenuBar from "../../images/svgs/MenuBar";
 import Logo from "../../pages/Logo";
 import style from "./RootLayout.module.css";
+import { AuthContext } from "../../components/AuthContext";
 import AuthModal from "../../components/AuthModal";
 
 const RootLayout = () => {
-  const [authModalOpen, setAuthModalOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
-  const [authMode, setAuthMode] = useState(""); // "signup" or "login"
-
-  // const location = useLocation();
-
-  // useEffect(() => {
-  //   // Check if the current route is "/signup" or "/login" and open the modal accordingly
-  //   if (location.pathname === "/signup" || location.pathname === "/login") {
-  //     setAuthModalOpen(true);
-  //     setAuthMode(location.pathname.substring(1)); // Remove leading "/" from pathname
-  //   } else {
-  //     setAuthModalOpen(false);
-  //     setAuthMode("");
-  //   }
-  // }, [location]);
 
   const showMenuBar = () => {
     setShowNav((onshow) => !onshow);
   };
 
-  const openAuthModal = (mode) => {
-    setAuthMode(mode);
-    setAuthModalOpen(true);
-  };
-
-  const closeAuthModal = () => {
-    setAuthModalOpen(false);
-    setAuthMode("");
-  };
+  const { openAuthModal } = useContext(AuthContext);
 
   return (
     <Fragment>
@@ -86,7 +64,7 @@ const RootLayout = () => {
       <div className={style["flex-wrapper"]}>
         <div className={style["inner-flex"]}>
           <NavLink
-            to=""
+            to="/"
             exact
           >
             <span>
@@ -107,14 +85,14 @@ const RootLayout = () => {
         <div>
           <NavLink
             to="/categories"
-            className={style.categories}
+            className={style["categories"]}
           >
             CATEGORIES
           </NavLink>
         </div>
         <div>
           <button
-            className={style.signin}
+            className={style["signin"]}
             onClick={() => openAuthModal("login")}
           >
             Login
@@ -122,7 +100,7 @@ const RootLayout = () => {
         </div>
         <div>
           <button
-            className={style.signup}
+            className={style["signup"]}
             onClick={() => openAuthModal("signup")}
           >
             Sign up
@@ -140,16 +118,10 @@ const RootLayout = () => {
       <div className={style["blur-bacground"]}></div>
       {/* SUB HEADING SECTION */}
       <div className={style["welcome-header"]}>
-        <p>
-          <marquee
-            behavior="scroll"
-            scrollamount="5"
-            direction=""
-          >
-            You are welcome to CONECTAR your number one platform in Nigeria to
-            hire someone capable to do all your home services for you within
-            short period of TIME.
-          </marquee>
+        <p className={style["scrolling-text"]}>
+          You are welcome to CONECTAR your number one platform in Nigeria to
+          hire someone capable to do all your home services for you within short
+          period of TIME.
         </p>
       </div>
       <main>
@@ -158,11 +130,7 @@ const RootLayout = () => {
       <footer>
         <Footer />
       </footer>
-      <AuthModal
-        isOpen={authModalOpen}
-        closeModal={closeAuthModal}
-        mode={authMode}
-      />
+      <AuthModal />
     </Fragment>
   );
 };

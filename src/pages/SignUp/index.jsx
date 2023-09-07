@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Formik } from "formik";
 import { advancedSchema, formSchema } from "../../schemas/index";
 import styles from "./SignUp.module.css"; // Import the CSS module
@@ -13,7 +13,7 @@ import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import CustomInput from "../../components/CustomInputs";
 import CustomCheckbox from "../../components/CustomCheckBox";
 import OAuth from "../../components/OAuth";
-import { Link } from "react-router-dom";
+import { AuthContext } from "../../components/AuthContext";
 
 const SignUp = () => {
   const onSubmit = async (values, actions) => {
@@ -25,6 +25,8 @@ const SignUp = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [activeType, setActiveType] = useState("owner");
 
+  const { openAuthModal } = useContext(AuthContext);
+
   function handleShowPassword() {
     setShowPassword((prevState) => !prevState);
   }
@@ -32,7 +34,8 @@ const SignUp = () => {
   function handleShowConfirmPassword() {
     setShowConfirmPassword((prevState) => !prevState);
   }
-  console.log("Type:", activeType);
+
+  
 
   return (
     <Formik
@@ -181,7 +184,8 @@ const SignUp = () => {
                   </a>
                   ,{" "}
                   <a
-                    href="/privacy-policy"
+                    href="/privacy"
+                    target="_blank"
                     className={styles["signup-tos__link"]}
                   >
                     Privacy Policy
@@ -212,12 +216,12 @@ const SignUp = () => {
           <OAuth />
           <div className={styles["signup-link-signin-container"]}>
             Already have an account
-            <Link
-              to={"/login"}
+            <button
               className={styles["signup-link-signin"]}
+              onClick={ () => openAuthModal("login")}
             >
-              Login
-            </Link>
+              Sign In
+            </button>
           </div>
         </Form>
       )}

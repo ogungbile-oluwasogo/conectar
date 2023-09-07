@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Formik } from "formik";
 import CustomInput from "../../components/CustomInputs";
 import { advancedSchema } from "../../schemas";
@@ -8,6 +8,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import OAuth from "../../components/OAuth";
 import CustomCheckBox from "../../components/CustomCheckBox";
+import { AuthContext } from "../../components/AuthContext";
 
 export default function SignIn() {
   const onSubmit = async (values, actions) => {
@@ -16,6 +17,8 @@ export default function SignIn() {
   };
 
   const [showPassword, setShowPassword] = useState(false);
+
+  const { openAuthModal } = useContext(AuthContext);
 
    function handleShowPassword() {
      setShowPassword((prevState) => !prevState);
@@ -93,12 +96,12 @@ export default function SignIn() {
               showError={false}
               message="Remember me"
             />
-            <Link
-              to="/forget-password"
+            <button
               className={styles["signin-forgetPassword"]}
+              onClick={() => openAuthModal("forget-password")}
             >
               Forget Password
-            </Link>
+            </button>
           </div>
 
           <div className={styles["signin-divider"]}>
@@ -114,12 +117,12 @@ export default function SignIn() {
             <OAuth />
             <p>
               New to Conectar?{" "}
-              <Link
-                to={"/login"}
+              <button
                 className={styles["signin-link-signin"]}
+                onClick={ () => openAuthModal("signup")}
               >
                 Join Us
-              </Link>
+              </button>
             </p>
           </div>
         </Form>
