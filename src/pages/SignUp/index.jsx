@@ -76,96 +76,121 @@ const SignUp = () => {
             </button>
           </div>
 
-          <div className={styles["signup-input-container"]}>
-            <div className={styles["signup-input-icon"]}>
-              <BsFillPersonFill />
-            </div>
-
-            <CustomInput
-              name="fullName"
-              placeholder="Enter your Full Name"
-              aria-required
-            />
-          </div>
-
-          <div className={styles["signup-input-container"]}>
-            <div className={styles["signup-input-icon"]}>
-              <BsEnvelope />
-            </div>
-
-            <CustomInput
-              name="email"
-              type="email"
-              placeholder="Enter your Full Name"
-              aria-required
-            />
-          </div>
-
-          {activeType === "provider" && (
+          <div className={styles["input-flex-container"]}>
             <div className={styles["signup-input-container"]}>
               <div className={styles["signup-input-icon"]}>
-                <BsBriefcaseFill />
+                <BsFillPersonFill />
               </div>
 
               <CustomInput
-                name="service"
-                placeholder="Indicate your service"
+                name="fullName"
+                placeholder="Enter your Full Name"
                 aria-required
               />
             </div>
-          )}
 
-          <div className={styles["signup-input-container"]}>
-            <div className={styles["signup-input-icon"]}>
-              <BsLock />
+            <div className={styles["signup-input-container"]}>
+              <div className={styles["signup-input-icon"]}>
+                <BsEnvelope />
+              </div>
+
+              <CustomInput
+                name="email"
+                type="email"
+                placeholder="Enter your Full Name"
+                aria-required
+              />
             </div>
-            <CustomInput
-              name="password"
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              aria-required
-            />
-            {showPassword ? (
-              <AiFillEye
-                className={styles["signup-password"]}
-                onClick={handleShowPassword}
-              />
-            ) : (
-              <AiFillEyeInvisible
-                className={styles["signup-password"]}
-                onClick={handleShowPassword}
-              />
+
+            {activeType === "provider" && (
+              <div className={styles["signup-input-container"]}>
+                <div className={styles["signup-input-icon"]}>
+                  <BsBriefcaseFill />
+                </div>
+
+                <CustomInput
+                  name="service"
+                  placeholder="Indicate your service"
+                  aria-required
+                />
+              </div>
             )}
+
+            <div className={styles["signup-input-container"]}>
+              <div className={styles["signup-input-icon"]}>
+                <BsLock />
+              </div>
+              <CustomInput
+                name="password"
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                aria-required
+              />
+              {showPassword ? (
+                <AiFillEye
+                  className={styles["signup-password"]}
+                  onClick={handleShowPassword}
+                />
+              ) : (
+                <AiFillEyeInvisible
+                  className={styles["signup-password"]}
+                  onClick={handleShowPassword}
+                />
+              )}
+            </div>
+
+            <div className={styles["signup-input-container"]}>
+              <div className={styles["signup-input-icon"]}>
+                <BsLock />
+              </div>
+              <CustomInput
+                name="confirmPassword"
+                type={showConfirmPassword ? "text" : "password"}
+                placeholder="Confirm Password"
+                aria-required
+              />
+              {showConfirmPassword ? (
+                <AiFillEye
+                  className={styles["signup-password"]}
+                  onClick={handleShowConfirmPassword}
+                />
+              ) : (
+                <AiFillEyeInvisible
+                  className={styles["signup-password"]}
+                  onClick={handleShowConfirmPassword}
+                />
+              )}
+            </div>
           </div>
 
-          <div className={styles["signup-input-container"]}>
-            <div className={styles["signup-input-icon"]}>
-              <BsLock />
-            </div>
-            <CustomInput
-              name="confirmPassword"
-              type={showConfirmPassword ? "text" : "password"}
-              placeholder="Confirm Password"
+          <div>
+            <CustomCheckbox
+              name="acceptedTos"
               aria-required
+              type="checkbox"
+              showError={true}
+              message={
+                <>
+                  I have read, understand and accept Conectar
+                  <a
+                    href="/terms-of-service"
+                    className={styles["signup-tos__link"]}
+                  >
+                    {" "}
+                    Terms of service
+                  </a>
+                  ,{" "}
+                  <a
+                    href="/privacy-policy"
+                    className={styles["signup-tos__link"]}
+                  >
+                    Privacy Policy
+                  </a>
+                  , and agree to receive emails from Conectar.
+                </>
+              }
             />
-            {showConfirmPassword ? (
-              <AiFillEye
-                className={styles["signup-password"]}
-                onClick={handleShowConfirmPassword}
-              />
-            ) : (
-              <AiFillEyeInvisible
-                className={styles["signup-password"]}
-                onClick={handleShowConfirmPassword}
-              />
-            )}
           </div>
-
-          <CustomCheckbox
-            type="checkbox"
-            name="acceptedTos"
-            aria-required
-          />
 
           <button
             disabled={isSubmitting}

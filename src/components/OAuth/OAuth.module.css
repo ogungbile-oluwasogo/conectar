@@ -8,18 +8,21 @@
 }
 
 .facebook-icon-btn {
-  padding: 0.5em;
+  padding: 0.7em;
+  padding-top: 0.8em;
   background: blue;
   border-radius: 50%;
   border: none;
   color: #ffffff;
+  text-align: center;
 
   margin-right: 3em;
   cursor: pointer;
 }
 
 .google-icon-btn {
-  padding: 0.5em 0.6em;
+  padding: 0.7em;
+  padding-top: 0.8em;
   background: red;
   border-radius: 50%;
   border: none;

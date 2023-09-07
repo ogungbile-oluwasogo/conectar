@@ -8,7 +8,7 @@ import JoinUsButton from "../../layouts/JoinUsButton";
 
 const Home = () => {
   const slidesImage = [
-    { url: "homeimageslider.jpg" },
+    { url: "homeimageslider1.jpg" },
     { url: "homeimageslider2.jpg" },
     { url: "homeimageslider3.jpg" },
     { url: "homeimageslider4.jpg" },

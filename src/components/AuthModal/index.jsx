@@ -17,15 +17,16 @@ const customStyles = {
   content: {
     position: "absolute",
     inset: "unset",
-    top: "70px",
-    width: "700px",
+    top: "10px",
+    bottom: "20px",
+    width: "600px",
     maxWidth: "95vw",
     margin: "0 auto",
     overflow: "auto",
     borderRadius: "15px",
     border: "1px solid #707070",
     height: "max-content",
-    maxHeight: "95vh",
+    maxHeight: "99vh",
   },
 };
 const AuthModal = ({ isOpen, closeModal, mode }) => {

@@ -1,10 +1,8 @@
 import { useField } from "formik";
-import styles from '../../pages/SignUp/SignUp.module.css'
+import styles from './CustomCheckBox.module.css'
 
-
-const CustomCheckbox = ({ label, ...props }) => {
+const CustomCheckbox = ({ label, message, showError, ...props }) => {
   const [field, meta] = useField(props);
-  
 
   return (
     <>
@@ -13,15 +11,16 @@ const CustomCheckbox = ({ label, ...props }) => {
           {...field}
           {...props}
         />
-        <p className={styles['signup-tos']}>
-          I have read, understand and accept Conectar
-          <span link="#" className={styles["signup-tos__span"]}> Terms of service</span>, <span link="#" className={styles["signup-tos__span"]}>Privacy Policy</span>, and agree
-          to receive emails from Conectar.
+        <p className={styles["signup-tos"]}>
+          {message}
         </p>
       </div>
 
-      {meta.touched && meta.error && <div className={styles["error"]}>{meta.error}</div>}
+      {meta.touched && meta.error && (
+        <span className={styles["error"]}>{meta.error}</span>
+      )}
     </>
   );
 };
+
 export default CustomCheckbox;

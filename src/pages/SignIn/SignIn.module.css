@@ -3,7 +3,7 @@
   width: 95%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 1em 0;
 }
 /* signin form stops */
 
@@ -14,3 +14,147 @@
   font-size: 1.1em;
 }
 /* signin form header stops */
+
+/* Input field starts */
+.signin-input {
+  width: 100%;
+  padding: 1rem 0.5rem 1rem 40px;
+  font-size: 1rem;
+  border: 1px solid #1cce7c;
+  background-color: #ffffff;
+  border-radius: 10px;
+  outline: none;
+  margin: 0.5em;
+}
+
+.signin-input:focus {
+  border-color: #1cce7c;
+}
+
+.signin-input::placeholder {
+  color: #a0aec0;
+  padding-left: 10px;
+}
+
+.signin-input[type="checkbox"] {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 0.5rem;
+  transform: scale(1.25);
+}
+
+.signin-input-container {
+  position: relative;
+}
+
+.input-flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-input-icon-container {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.signin-input-icon {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: #a0aec0;
+}
+/* Input fields ends */
+
+/* password visibility starts */
+.signin-password {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  cursor: pointer;
+}
+
+/* signin button starts */
+.signin-button {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.8rem 0rem;
+  background: #1cce7c;
+  color: #ffffff;
+  border: 1px solid #1cce7c;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signin-button:hover {
+  opacity: 0.9;
+}
+
+.signin-button:disabled {
+  opacity: 0.35;
+}
+/* signin button ends */
+
+/* sign in divider */
+.signin-divider {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.signin-divider-line {
+  flex: 1;
+  border-bottom: 0.5px solid #e5e3e3;
+}
+
+.signin-divider-text {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #434846;
+  font-weight: 600;
+  padding: 0.2em;
+}
+/* sign in divider ends */
+
+/* signin-link-signin starts */
+.signin-link-signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-link-signin,
+.signin-forgetPassword {
+  margin: 1em;
+  color: #800000;
+  font-weight: 600;
+}
+
+.signin-link-signin:hover,
+.signin-forgetPassword:hover {
+  opacity: 0.85;
+}
+/* signin-link-signin ends */
+
+/* Sign in remember me and forget password starts */
+.signin-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5em;
+}
+/* Sign in remember me and forget password ends */
+
+/* signin-auth-signup-links */
+.signin-auth-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

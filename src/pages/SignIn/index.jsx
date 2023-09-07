@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Formik } from "formik";
 import CustomInput from "../../components/CustomInputs";
 import { advancedSchema } from "../../schemas";
 import styles from "./SignIn.module.css";
-import { BsEnvelope } from "react-icons/bs";
+import { BsEnvelope, BsLock } from "react-icons/bs";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import OAuth from "../../components/OAuth";
+import CustomCheckBox from "../../components/CustomCheckBox";
 
 export default function SignIn() {
   const onSubmit = async (values, actions) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     actions.resetForm();
   };
+
+  const [showPassword, setShowPassword] = useState(false);
+
+   function handleShowPassword() {
+     setShowPassword((prevState) => !prevState);
+   }
+
+
 
   return (
     <Formik
@@ -30,9 +42,8 @@ export default function SignIn() {
             <p className={styles["signin-form-text"]}>Sign In</p>
           </div>
           <div>
-            <div>
-              {" "}
-              <div>
+            <div className={styles["signin-input-container"]}>
+              <div className={styles["signin-input-icon"]}>
                 <BsEnvelope />
               </div>
               <CustomInput
@@ -42,24 +53,75 @@ export default function SignIn() {
                 aria-required
               />
             </div>
-            <div>
-              <div>
-                <BsEnvelope />
+            <div className={styles["signin-input-container"]}>
+              <div className={styles["signin-input-icon"]}>
+                <BsLock />
               </div>
               <CustomInput
                 name="password"
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 aria-required
               />
+              {showPassword ? (
+                <AiFillEye
+                  className={styles["signin-password"]}
+                  onClick={handleShowPassword}
+                />
+              ) : (
+                <AiFillEyeInvisible
+                  className={styles["signin-password"]}
+                  onClick={handleShowPassword}
+                />
+              )}
             </div>
           </div>
+
           <button
             disabled={isSubmitting}
             type="submit"
+            className={styles["signin-button"]}
           >
             Submit
           </button>
+
+          <div className={styles["signin-check"]}>
+            <CustomCheckBox
+              name="rememberMe"
+              aria-required
+              type="checkbox"
+              showError={false}
+              message="Remember me"
+            />
+            <Link
+              to="/forget-password"
+              className={styles["signin-forgetPassword"]}
+            >
+              Forget Password
+            </Link>
+          </div>
+
+          <div className={styles["signin-divider"]}>
+            <div className={styles["signin-divider-line"]}>
+              <div className={styles["divider-knob"]}></div>
+            </div>
+            <p className={styles["signin-divider-text"]}>OR</p>
+            <div className={styles["signin-divider-line"]}>
+              <div className={styles["divider-knob"]}></div>
+            </div>
+          </div>
+          <div className={styles["signin-auth-signup"]}>
+            <OAuth />
+            <p>
+              New to Conectar?{" "}
+              <Link
+                to={"/login"}
+                className={styles["signin-link-signin"]}
+              >
+                Join Us
+              </Link>
+            </p>
+          </div>
         </Form>
       )}
     </Formik>

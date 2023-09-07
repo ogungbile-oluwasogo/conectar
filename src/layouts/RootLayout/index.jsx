@@ -1,5 +1,5 @@
-import { Fragment, useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Fragment, useEffect, useState } from "react";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import Footer from "../../components/Footer";
 import MenuBar from "../../images/svgs/MenuBar";
 import Logo from "../../pages/Logo";
@@ -10,6 +10,19 @@ const RootLayout = () => {
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [authMode, setAuthMode] = useState(""); // "signup" or "login"
+
+  // const location = useLocation();
+
+  // useEffect(() => {
+  //   // Check if the current route is "/signup" or "/login" and open the modal accordingly
+  //   if (location.pathname === "/signup" || location.pathname === "/login") {
+  //     setAuthModalOpen(true);
+  //     setAuthMode(location.pathname.substring(1)); // Remove leading "/" from pathname
+  //   } else {
+  //     setAuthModalOpen(false);
+  //     setAuthMode("");
+  //   }
+  // }, [location]);
 
   const showMenuBar = () => {
     setShowNav((onshow) => !onshow);
@@ -72,7 +85,10 @@ const RootLayout = () => {
 
       <div className={style["flex-wrapper"]}>
         <div className={style["inner-flex"]}>
-          <NavLink to="/">
+          <NavLink
+            to=""
+            exact
+          >
             <span>
               <Logo />
             </span>
@@ -90,7 +106,7 @@ const RootLayout = () => {
         </div>
         <div>
           <NavLink
-            to="categories"
+            to="/categories"
             className={style.categories}
           >
             CATEGORIES

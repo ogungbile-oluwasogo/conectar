@@ -15,10 +15,11 @@ import NotFound from "./components/NotFound";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route
-        path="/"
-        element={<RootLayout />}
-      >
+      
+        <Route
+          path="/"
+          element={<RootLayout />}
+        >
         <Route
           index
           element={<Home />}
@@ -40,8 +41,7 @@ function App() {
             element=""
           />
         </Route>
-        {/* <Route path="/login" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} /> */}
+
         <Route
           path="*"
           element={<NotFound />}
