@@ -1,14 +1,24 @@
-import React, { useContext, useState } from 'react'
-import { AuthContext } from '../../components/AuthContext';
-import { Link } from 'react-router-dom';
-import OAuth from '../../components/OAuth';
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../components/AuthContext";
+import { Link } from "react-router-dom";
+import OAuth from "../../components/OAuth";
+import styles from "./ForgetPassword.module.css";
+import { Form, Formik } from "formik";
+import CustomInput from "../../components/CustomInputs";
 
+import doorKey from "../../images/lock.png";
+import { advancedSchema } from "../../schemas";
+import { BsEnvelope } from "react-icons/bs";
 
 export default function ForgetPassword() {
+  const onSubmit = async (values, actions) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    actions.resetForm();
+  };
+
   const { openAuthModal } = useContext(AuthContext);
 
   // const [email, setEmail] = useState("");
-  
 
   // function onChange(e) {
   //   setEmail(e.target.value);
@@ -20,7 +30,7 @@ export default function ForgetPassword() {
 
   //     const auth = getAuth();
   //     await sendPasswordResetEmail(auth, email);
-      
+
   //     toast.success("Email sent successfully")
   //   } catch (error) {
   //     toast.error("Could not send reset email");
@@ -28,60 +38,85 @@ export default function ForgetPassword() {
   // }
 
   return (
-    <section>
-      <h1 className=" ">
-        Forgot Password
-      </h1>
-      <div className="">
-        <div className="">
+    <section className={styles["forget-password-container"]}>
+      <h1 className={styles["forget-password-heading"]}>Forgot Password</h1>
+
+      <div className={styles["forget-password"]}>
+        <div className={styles["forget-password-image-container"]}>
           <img
-            src="https://images.unsplash.com/photo-1575908539614-ff89490f4a78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGtleXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-            alt="Key"
-            className=""
+            src={doorKey}
+            alt="door-with-key"
+            className={styles["forget-password-image"]}
           />
         </div>
-        <div className="">
-          <form >
-            <input
-              type="email"
-              id="email"
-              placeholder="Email-address"
-              aria-required
-              className=""
-            />
-            {/*onChange is an eventListener that listens when something changes like typing something in a form field */}
-            <div className="">
-              <p>
-                {`Don't have an account?`}
-                <Link
-                  to={"/sign-up"}
-                  className=""
+
+        <div className={styles["forget-password-form-container"]}>
+          <Formik
+            initialValues={{
+              email: "",
+            }}
+            validationSchema={advancedSchema}
+            onSubmit={onSubmit}
+          >
+            {({ isSubmitting }) => (
+              <Form className={styles["forget-password-form"]}>
+                <div className={styles["forget-password-input-container"]}>
+                  <label
+                    htmlFor="email"
+                    className={styles["hidden-label"]}
+                  >
+                    Email
+                  </label>
+                  <div className={styles["forget-password-icon"]}>
+                    <BsEnvelope aria-hidden="true" />
+                  </div>
+                  <CustomInput
+                    name="email"
+                    type="email"
+                    placeholder="Email Address"
+                    aria-required
+                  />
+                </div>
+
+                <button
+                  disabled={isSubmitting}
+                  type="submit"
+                  className={styles["forget-password-button"]}
                 >
-                  Sign Up
-                </Link>
-              </p>
-              <p>
-                <Link
-                  to={"/sign-in"}
-                  className=""
-                >
-                  Sign In
-                </Link>
-              </p>
-            </div>
-            <button
-              type="submit"
-              className=""
-            >
-              Reset password
-            </button>
-            <div className="">
-              <p className="">OR</p>
-            </div>
-            <OAuth />
-          </form>
+                  Reset Password
+                </button>
+
+                <div className={styles["forget-password-account"]}>
+                  <div>
+                    {`Don't have an account?`}
+                    <button
+                      onClick={() => openAuthModal("signup")}
+                      className={styles["forget-password-signup"]}
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      className={styles["forget-password-signin"]}
+                      onClick={() => openAuthModal("login")}
+                    >
+                      Login
+                    </button>
+                  </div>
+                </div>
+
+                <div className={styles["forget-password-divider"]}>
+                  <div className={styles["forget-password-divider-line"]}></div>
+                  <p className={styles["forget-password-divider-text"]}>OR</p>
+                  <div className={styles["forget-password-divider-line"]}></div>
+                </div>
+                <OAuth />
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
     </section>
-  )
+  );
 }

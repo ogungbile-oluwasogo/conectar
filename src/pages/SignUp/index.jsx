@@ -35,8 +35,6 @@ const SignUp = () => {
     setShowConfirmPassword((prevState) => !prevState);
   }
 
-  
-
   return (
     <Formik
       initialValues={{
@@ -80,9 +78,13 @@ const SignUp = () => {
           </div>
 
           <div className={styles["input-flex-container"]}>
+            <label
+              htmlFor="fullName"
+              className={styles["hidden-label"]}
+            >Full Name</label>
             <div className={styles["signup-input-container"]}>
               <div className={styles["signup-input-icon"]}>
-                <BsFillPersonFill />
+                <BsFillPersonFill aria-hidden="true" />
               </div>
 
               <CustomInput
@@ -93,8 +95,12 @@ const SignUp = () => {
             </div>
 
             <div className={styles["signup-input-container"]}>
+              <label
+                htmlFor="email"
+                className={styles["hidden-label"]}
+              >Email</label>
               <div className={styles["signup-input-icon"]}>
-                <BsEnvelope />
+                <BsEnvelope aria-hidden="true" />
               </div>
 
               <CustomInput
@@ -107,8 +113,12 @@ const SignUp = () => {
 
             {activeType === "provider" && (
               <div className={styles["signup-input-container"]}>
+                <label
+                  htmlFor="service"
+                  className={styles["hidden-label"]}
+                >Service</label>
                 <div className={styles["signup-input-icon"]}>
-                  <BsBriefcaseFill />
+                  <BsBriefcaseFill aria-hidden="true" />
                 </div>
 
                 <CustomInput
@@ -120,8 +130,12 @@ const SignUp = () => {
             )}
 
             <div className={styles["signup-input-container"]}>
+              <label
+                htmlFor="password"
+                className={styles["hidden-label"]}
+              >Password</label>
               <div className={styles["signup-input-icon"]}>
-                <BsLock />
+                <BsLock aria-hidden="true" />
               </div>
               <CustomInput
                 name="password"
@@ -133,18 +147,24 @@ const SignUp = () => {
                 <AiFillEye
                   className={styles["signup-password"]}
                   onClick={handleShowPassword}
+                  aria-hidden="true"
                 />
               ) : (
                 <AiFillEyeInvisible
                   className={styles["signup-password"]}
                   onClick={handleShowPassword}
+                  aria-hidden="true"
                 />
               )}
             </div>
 
             <div className={styles["signup-input-container"]}>
+              <label
+                htmlFor="confirmPassword"
+                className={styles["hidden-label"]}
+              >Confirm Password</label>
               <div className={styles["signup-input-icon"]}>
-                <BsLock />
+                <BsLock aria-hidden="true" />
               </div>
               <CustomInput
                 name="confirmPassword"
@@ -156,11 +176,13 @@ const SignUp = () => {
                 <AiFillEye
                   className={styles["signup-password"]}
                   onClick={handleShowConfirmPassword}
+                  aria-hidden="true"
                 />
               ) : (
                 <AiFillEyeInvisible
                   className={styles["signup-password"]}
                   onClick={handleShowConfirmPassword}
+                  aria-hidden="true"
                 />
               )}
             </div>
@@ -213,12 +235,16 @@ const SignUp = () => {
               <div className={styles["divider-knob"]}></div>
             </div>
           </div>
-          <OAuth />
+
+          <div>
+            <OAuth />
+          </div>
+
           <div className={styles["signup-link-signin-container"]}>
             Already have an account
             <button
               className={styles["signup-link-signin"]}
-              onClick={ () => openAuthModal("login")}
+              onClick={() => openAuthModal("login")}
             >
               Sign In
             </button>

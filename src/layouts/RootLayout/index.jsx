@@ -1,11 +1,12 @@
-import { Fragment, useContext, useEffect, useState } from "react";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { Fragment, useContext, useState } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 import Footer from "../../components/Footer";
 import MenuBar from "../../images/svgs/MenuBar";
 import Logo from "../../pages/Logo";
 import style from "./RootLayout.module.css";
 import { AuthContext } from "../../components/AuthContext";
 import AuthModal from "../../components/AuthModal";
+import Home from "../../pages/Home";
 
 const RootLayout = () => {
   const [showNav, setShowNav] = useState(false);
@@ -23,8 +24,10 @@ const RootLayout = () => {
         <div
           className={style["mobile-nav-modal"]}
           onClick={showMenuBar}
+          aria-hidden="true"
         ></div>
       )}
+
       <div className={showNav ? "mobile-navbar-show" : "mobile-navbar-hide"}>
         {showNav && (
           <div className={style["mobile-nav-list"]}>
@@ -38,6 +41,7 @@ const RootLayout = () => {
                 Sign In
               </button>
             </div>
+
             <div>
               <button
                 className={style["signup-mobile"]}
@@ -46,6 +50,7 @@ const RootLayout = () => {
                 Sign Up
               </button>
             </div>
+
             <div>
               <NavLink
                 to="categories"
@@ -61,7 +66,7 @@ const RootLayout = () => {
 
       {/* NAVIGATION SECTION */}
 
-      <div className={style["flex-wrapper"]}>
+      <nav className={style["flex-wrapper"]}>
         <div className={style["inner-flex"]}>
           <NavLink
             to="/"
@@ -72,6 +77,7 @@ const RootLayout = () => {
             </span>
           </NavLink>
         </div>
+
         <div>
           <form action="">
             <input
@@ -82,6 +88,7 @@ const RootLayout = () => {
             <button className={style["header-search-button"]}>Search</button>
           </form>
         </div>
+
         <div>
           <NavLink
             to="/categories"
@@ -90,6 +97,7 @@ const RootLayout = () => {
             CATEGORIES
           </NavLink>
         </div>
+
         <div>
           <button
             className={style["signin"]}
@@ -98,6 +106,7 @@ const RootLayout = () => {
             Login
           </button>
         </div>
+
         <div>
           <button
             className={style["signup"]}
@@ -113,23 +122,32 @@ const RootLayout = () => {
         >
           <MenuBar showNav={showNav} />
         </span>
-      </div>
+      </nav>
+
       {/* Blur Background */}
       <div className={style["blur-bacground"]}></div>
+
       {/* SUB HEADING SECTION */}
-      <div className={style["welcome-header"]}>
-        <p className={style["scrolling-text"]}>
+      <header className={style["welcome-header"]}>
+        <p
+          className={style["scrolling-text"]}
+          aria-label="Welcome Message"
+        >
           You are welcome to CONECTAR your number one platform in Nigeria to
           hire someone capable to do all your home services for you within short
           period of TIME.
         </p>
-      </div>
+      </header>
+
       <main>
         <Outlet />
+        <Home />
       </main>
+
       <footer>
         <Footer />
       </footer>
+
       <AuthModal />
     </Fragment>
   );

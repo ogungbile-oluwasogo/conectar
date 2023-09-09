@@ -5,7 +5,6 @@ import { advancedSchema } from "../../schemas";
 import styles from "./SignIn.module.css";
 import { BsEnvelope, BsLock } from "react-icons/bs";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import OAuth from "../../components/OAuth";
 import CustomCheckBox from "../../components/CustomCheckBox";
 import { AuthContext } from "../../components/AuthContext";
@@ -44,10 +43,17 @@ export default function SignIn() {
           <div>
             <p className={styles["signin-form-text"]}>Sign In</p>
           </div>
+
           <div>
             <div className={styles["signin-input-container"]}>
+              <label
+                htmlFor="email"
+                className={styles["hidden-label"]}
+              >
+                Email Address
+              </label>
               <div className={styles["signin-input-icon"]}>
-                <BsEnvelope />
+                <BsEnvelope aria-hidden="true" />
               </div>
               <CustomInput
                 name="email"
@@ -56,10 +62,19 @@ export default function SignIn() {
                 aria-required
               />
             </div>
+
             <div className={styles["signin-input-container"]}>
+              <label
+                htmlFor="password"
+                className={styles["hidden-label"]}
+              >
+                Password
+              </label>
+              
               <div className={styles["signin-input-icon"]}>
-                <BsLock />
+                <BsLock aria-hidden="true" />
               </div>
+
               <CustomInput
                 name="password"
                 type={showPassword ? "text" : "password"}
@@ -106,11 +121,9 @@ export default function SignIn() {
 
           <div className={styles["signin-divider"]}>
             <div className={styles["signin-divider-line"]}>
-              <div className={styles["divider-knob"]}></div>
             </div>
             <p className={styles["signin-divider-text"]}>OR</p>
             <div className={styles["signin-divider-line"]}>
-              <div className={styles["divider-knob"]}></div>
             </div>
           </div>
           <div className={styles["signin-auth-signup"]}>
@@ -119,7 +132,7 @@ export default function SignIn() {
               New to Conectar?{" "}
               <button
                 className={styles["signin-link-signin"]}
-                onClick={ () => openAuthModal("signup")}
+                onClick={() => openAuthModal("signup")}
               >
                 Join Us
               </button>
