@@ -8,7 +8,6 @@ import {
 import RootLayout from "./layouts/RootLayout";
 import AboutUs from "./pages/AboutUs";
 import Categories from "./pages/Categories";
-import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
 import NotFound from "./components/NotFound";
 

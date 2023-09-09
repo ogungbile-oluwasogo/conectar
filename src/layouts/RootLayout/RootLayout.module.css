@@ -50,7 +50,7 @@
   margin-bottom: 15px;
 }
 
-.blur-bacground {
+.blur-background {
   background-image: url("/public/platewashing.jpg");
   filter: blur(45px);
   height: 95px;
@@ -64,6 +64,11 @@
 }
 
 /* Marguee scrolling-text styling starts*/
+.welcome-header {
+  width: 100%;
+  overflow: hidden;
+}
+
 .scrolling-text {
   white-space: nowrap;
   overflow: hidden;

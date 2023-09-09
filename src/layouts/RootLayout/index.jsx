@@ -125,7 +125,7 @@ const RootLayout = () => {
       </nav>
 
       {/* Blur Background */}
-      <div className={style["blur-bacground"]}></div>
+      <div className={style["blur-background"]}></div>
 
       {/* SUB HEADING SECTION */}
       <header className={style["welcome-header"]}>
