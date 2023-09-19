@@ -1,8 +1,8 @@
 import React from "react";
-import ArrowSvg from "../images/svgs/ArrowSvg";
-import Naira from "../images/svgs/Naira";
-import SearchSvg from "../images/svgs/SearchSvg";
-import Thumps from "../images/svgs/Thumps";
+import ArrowSvg from "../../images/svgs/ArrowSvg";
+import Naira from "../../images/svgs/Naira";
+import SearchSvg from "../../images/svgs/SearchSvg";
+import Thumps from "../../images/svgs/Thumps";
 import style from "./HomeProcess.module.css";
 
 const HomeProcess = () => {

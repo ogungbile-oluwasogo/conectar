@@ -1,15 +1,15 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Facebook from "../images/svgs/Facebook";
-import Google from "../images/svgs/Google";
-import LinkedIn from "../images/svgs/LinkedIn";
-import Twitter from "../images/svgs/Twitter";
-import Logo from "../pages/Logo";
+import Facebook from "../../images/svgs/Facebook";
+import Google from "../../images/svgs/Google";
+import LinkedIn from "../../images/svgs/LinkedIn";
+import Twitter from "../../images/svgs/Twitter";
+import Logo from "../../pages/Logo";
 import style from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <Fragment>
+    <footer>
       <div className={style["footer-wrapper"]}>
         <div className={style["footer-wrapper-flex"]}>
           <Logo />
@@ -90,7 +90,7 @@ const Footer = () => {
         <p>All right reserved:</p>
         <p>2023 @ Nigeria Conectar.com</p>
       </div>
-    </Fragment>
+    </footer>
   );
 };
 

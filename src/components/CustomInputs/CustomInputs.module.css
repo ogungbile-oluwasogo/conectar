@@ -1,0 +1,65 @@
+
+/* Input field starts */
+.signup-input {
+  width: 100%;
+  padding: 1rem 0.5rem 1rem 40px;
+  font-size: 1rem;
+  border: 1px solid #1cce7c;
+  background-color: #ffffff;
+  border-radius: 10px;
+  outline: none;
+  margin: 0.5em;
+}
+
+.signup-input:focus {
+  border-color: #1cce7c;
+}
+
+.signup-input::placeholder {
+  color: #a0aec0;
+  padding-left: 10px;
+}
+
+.signup-input[type="checkbox"] {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 0.5rem;
+  transform: scale(1.25);
+}
+
+
+ .signup-input-container {
+  position: relative;
+}
+
+.input-flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  color: #a0aec0;
+}
+/* Input fields ends */
+
+/* input error starts */
+.signup-input.input-error,
+select.input-error {
+  border-color: #fc8181;
+}
+/* input error ends */
+
+
+
+/* error style starts */
+.error {
+  color: #fc8181;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+/* error style ends */

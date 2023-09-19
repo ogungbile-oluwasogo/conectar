@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import style from "../pages/Home.module.css";
+import style from "../../pages/Home/Home.module.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 

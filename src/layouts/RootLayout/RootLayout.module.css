@@ -26,7 +26,7 @@ main {
 }
 
 .categories-mobile {
-  background-color: #ffffff;
+  background-color: #f7fafc;
   padding: 11px 40px;
   height: 40px;
   width: 100px;
@@ -38,7 +38,7 @@ main {
 }
 
 .signin-mobile {
-  background-color: #ffffff;
+  background-color: #f7fafc;
   height: 50px;
   width: 120px;
   border-radius: 10px;
@@ -56,12 +56,12 @@ main {
   border-radius: 10px;
   font-size: medium;
   border: 1px solid #b1a6a6;
-  color: #fff;
+  color: #f7fafc;
   cursor: pointer;
   margin-bottom: 15px;
 }
 
-.blur-bacground {
+.blur-background {
   background-image: url("/public/platewashing.jpg");
   filter: blur(45px);
   height: 95px;
@@ -73,6 +73,28 @@ main {
   width: 100%;
   overflow: hidden;
 }
+
+/* Marguee scrolling-text styling starts*/
+.welcome-header {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Marguee scrolling-text styling stops */
 
 .flex-wrapper {
   position: absolute;
@@ -117,8 +139,8 @@ main {
   height: 42px;
   width: 98px;
   background-color: #1cce7c;
-  border: 1px solid #b1a6a6;
-  color: #fff;
+  border: none;
+  color: #f7fafc;
   font-size: medium;
   border-radius: 0px 10px 10px 0px;
   z-index: 1;
@@ -130,14 +152,13 @@ main {
 }
 
 .categories {
-  background-color: #ffffff;
+  background-color: #f7fafc;
   margin-right: 30px;
-  padding: 11px 60px;
-  height: 40px;
-  width: 215px;
+  padding: 1em;
+  width: 115px;
   border-radius: 10px;
+  border: none;
   font-size: medium;
-  border: 1px solid #800000;
   color: #800000;
   cursor: pointer;
 }
@@ -147,38 +168,36 @@ a {
 }
 a.active {
   background-color: #800000;
-  color: #fff;
+  color: #f7fafc;
 }
 
 .categories:hover {
   background-color: #800000;
-  color: #fff;
+  color: #f7fafc;
 }
 
 .signin {
-  background-color: #ffffff;
-  height: 50px;
-  width: 120px;
+  background-color: #f7fafc;
+  padding: 1em;
   border-radius: 10px;
+  border: none;
   font-size: medium;
-  border: 1px solid #800000;
   color: #800000;
   cursor: pointer;
 }
 
 .signin:hover {
   background-color: #800000;
-  color: #fff;
+  color: #f7fafc;
 }
 
 .signup {
   background-color: #1cce7c;
-  height: 50px;
-  width: 120px;
+  padding: 1em;
+  border: none;
   border-radius: 10px;
   font-size: medium;
-  border: 1px solid #b1a6a6;
-  color: #fff;
+  color: #f7fafc;
   cursor: pointer;
 }
 
@@ -190,7 +209,7 @@ a.active {
 
 .welcome-header {
   /* margin-top: 200px; */
-  color: #fff;
+  color: #f7fafc;
   display: flex;
   background-color: #800000;
   height: 60px;
@@ -261,19 +280,23 @@ a.active {
   .header-input::placeholder {
     padding-left: 10px;
   }
+
   .header-search-button {
     width: 65px;
   }
+
   .categories {
     margin-right: 10px;
     padding: 11px 40px;
     height: 40px;
     /* width: 100px; */
   }
+
   .signin {
     height: 47px;
     width: 100px;
   }
+
   .signup {
     height: 47px;
     width: 100px;
@@ -284,33 +307,40 @@ a.active {
   .flex-wrapper {
     gap: 25px;
   }
+
   .flex-wrapper form {
     margin-right: 40px;
   }
+
   .header-input {
     background-color: #e2e0e0;
     border: 1px solid #e2e0e0;
     height: 36px;
     width: 140px;
   }
+
   .header-input::placeholder {
     padding-left: 7px;
   }
+
   .header-search-button {
     width: 65px;
     right: -55px;
     top: -2px;
   }
+
   .categories {
     margin-right: 10px;
     padding: 9px 25px;
     height: 40px;
     /* width: 100px; */
   }
+
   .signin {
     height: 45px;
     width: 90px;
   }
+
   .signup {
     height: 45px;
     width: 90px;
