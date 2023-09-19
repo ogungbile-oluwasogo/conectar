@@ -5,7 +5,7 @@ import style from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
       <div className={style["footer-wrapper"]}>
         <Logo />
         <div className={style["footer-inner-flex"]}>
@@ -70,7 +70,7 @@ const Footer = () => {
         <p>All right reserved:</p>
         <p>2023 @ Nigeria Conectar.com</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

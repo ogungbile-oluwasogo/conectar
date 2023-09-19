@@ -1,4 +1,3 @@
-
 .icon-container {
   display: flex;
   align-items: center;
@@ -8,12 +7,12 @@
 }
 
 .facebook-icon-btn {
-  padding: 0.7em;
-  padding-top: 0.8em;
-  background: blue;
+  width: 49px;
+  height: 49px;
+  background: #285bc2;
   border-radius: 50%;
   border: none;
-  color: #ffffff;
+  color: #F7FAFC;
   text-align: center;
 
   margin-right: 3em;
@@ -21,18 +20,18 @@
 }
 
 .google-icon-btn {
-  padding: 0.7em;
-  padding-top: 0.8em;
-  background: red;
+  width: 45px;
+  height: 45px;
+  background: #df1c1c;
   border-radius: 50%;
   border: none;
-  color: #ffffff;
+  color: #F7FAFC;
 
   cursor: pointer;
 }
 
 .facebook-icon {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .facebook-icon:hover {
@@ -46,4 +45,3 @@
 .google-icon:hover {
   opacity: 0.8;
 }
-
