@@ -1,0 +1,38 @@
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Terms and condition starts*/
+.signup-tos {
+  margin-left: 15px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 796px) {
+  .signup-tos {
+    font-size: 0.9rem;
+  }
+}
+
+.signup-tos__link {
+  color: #800000;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Terms and condition ends*/
+
+/* error style starts */
+.error {
+  color: #fc8181;
+  font-size: 0.75rem;
+  text-align: left;
+  padding: 4px;
+}
+
+.error-container {
+  margin-top: 8px;
+}
+/* error style ends */

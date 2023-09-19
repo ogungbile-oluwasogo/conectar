@@ -1,0 +1,47 @@
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1em 0;
+}
+
+.facebook-icon-btn {
+  width: 49px;
+  height: 49px;
+  background: #285bc2;
+  border-radius: 50%;
+  border: none;
+  color: #F7FAFC;
+  text-align: center;
+
+  margin-right: 3em;
+  cursor: pointer;
+}
+
+.google-icon-btn {
+  width: 45px;
+  height: 45px;
+  background: #df1c1c;
+  border-radius: 50%;
+  border: none;
+  color: #F7FAFC;
+
+  cursor: pointer;
+}
+
+.facebook-icon {
+  font-size: 1.1rem;
+}
+
+.facebook-icon:hover {
+  opacity: 0.8;
+}
+
+.google-icon {
+  font-size: 1.3rem;
+}
+
+.google-icon:hover {
+  opacity: 0.8;
+}

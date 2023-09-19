@@ -4,12 +4,11 @@
 
 .process-blur-background {
   background-image: url("/public/homeblurbackground.jpg");
-  filter: blur(3px);
+  filter: blur(2px);
   background-position: 35% 65%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 450px;
-  border: 1px solid #707070;
 }
 
 .process-background-color {
@@ -47,7 +46,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #1cce7c;
+  /* border: 1px solid #1cce7c; */
 }
 
 .arrow-styling {

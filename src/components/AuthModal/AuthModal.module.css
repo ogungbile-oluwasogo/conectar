@@ -1,0 +1,13 @@
+.close {
+  all: unset;
+  position: sticky;
+  top: 10px;
+  left: 600px;
+  z-index: 3;
+  width: 10%;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

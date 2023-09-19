@@ -1,4 +1,4 @@
-import style from "./AboutUs.module.css";
+import style from "../AboutUs/AboutUs.module.css";
 
 const Privacy = () => {
   return (
